@@ -3,14 +3,12 @@
 #include<stdlib.h>
 #include<unistd.h>
 
-
 int main()
 {	
 	pid_t cpid; //cpid is a var of data type pid_t i.e. int to store (+ve, -ve or 0)
-		
 	cpid = fork();  //create the process with id stored in cpid
 
-	if ( cpid < 0){
+	if ( cpid < 0){ //-ve value
 		printf("\n Cannot create the process");
 		exit(0);
 	}
